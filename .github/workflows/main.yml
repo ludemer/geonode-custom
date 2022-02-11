@@ -7,20 +7,17 @@ name: deploy
 
 jobs:
   deploy: 
-    name: deploy
-    runs-on: ubuntu-latest
-    steps: 
-    - uses: actions/checkout@v1
-    - name: build an d push to docker
-      uses: docker/build-push-action@v1
-      with: 
-         username: ${{ secrets.DOCKERHUB_USERNAME }} 
-         password: ${{ secrets.DOCKERHUB_PASSWORD }}
-         repository: scanterra/geoserver_data
-         tags: prueba-buildeo-develop
-
-jobs:
-  deploy:
+    #name: deploy
+    #runs-on: ubuntu-latest
+    #steps: 
+    #- uses: actions/checkout@v1
+    #- name: build an d push to docker
+    #  uses: docker/build-push-action@v1
+    #  with: 
+    #     username: ${{ secrets.DOCKERHUB_USERNAME }} 
+    #     password: ${{ secrets.DOCKERHUB_PASSWORD }}
+    #     repository: scanterra/geoserver_data
+    #     tags: prueba-buildeo-develop
     name: Start Deployment
     uses: TapTap21/docker-remote-deployment-action@v1.0
     with:
